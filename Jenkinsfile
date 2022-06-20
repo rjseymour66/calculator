@@ -22,7 +22,7 @@ pipeline {
 				sh "./gradlew jacocoTestCoverageVerification"
 			}
 		}
-		stage("Code coverage") {
+		stage("Static code analysis") {
 			steps {
 				sh "./gradlew checkstyleMain"
 				publishHTML (target: [
